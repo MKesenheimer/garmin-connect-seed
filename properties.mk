@@ -1,4 +1,4 @@
-DEVICE = fenix5s
-SDK_HOME = /Users/daniel.siwiec/connectiq-sdk-mac-3.0.4
+DEVICE = fr235
+SDK_HOME = /Users/kesenheimer/Library/Application\ Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-3.2.5-2021-02-12-6d31f4357
 DEPLOY = /Volumes/GARMIN/GARMIN/APPS/
-PRIVATE_KEY = /Users/daniel.siwiec/.ssh/id_rsa_garmin.der
+PRIVATE_KEY = /Users/kesenheimer/.ssh/developer_key.der

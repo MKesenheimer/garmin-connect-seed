@@ -1,8 +1,12 @@
 include properties.mk
 
-appName = `grep entry manifest.xml | sed 's/.*entry="\([^"]*\).*/\1/'`
-devices = `grep 'iq:product id' manifest.xml | sed 's/.*iq:product id="\([^"]*\).*/\1/'`
-JAVA_OPTIONS = JDK_JAVA_OPTIONS="--add-modules=java.xml.bind"
+#appName = $(shell grep --color=never entry manifest.xml | sed -n 's/.*entry="\([^"]*\).*/\1/')
+appName = $(shell ./appName.sh)
+#devices = $(shell grep --color=never 'iq:product id' manifest.xml | sed 's/.*iq:product id="\([^"]*\).*/\1/')
+devices = $(shell ./devices.sh)
+
+#JAVA_OPTIONS = JDK_JAVA_OPTIONS="--add-modules=java.xml.bind"
+JAVA_OPTIONS = JDK_JAVA_OPTIONS=""
 
 build:
 	$(SDK_HOME)/bin/monkeyc \
